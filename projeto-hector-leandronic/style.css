@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'MelodySouthern';
+    src: url('fonts/melodysouthernregular.otf') format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'LemonMilkRegular';
+    src: url('fonts/lemonmilkregular.otf') format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'MelodySouthernScript';
+    src: url('fonts/melodysouthernscript.otf') format('opentype');
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: 'LemonMilkLight';
+    src: url('fonts/lemonmilklight.otf') format('opentype');
+    font-weight: lighter;
+}
+
+:root {
+    --cor0: #e89e65;
+    --cor1: #000000;
+    --cor2: #ffffff;
+
+    --fonte1: "MelodySouthernScript", cursive;
+    --fonte2: "MelodySouthern", cursive;
+    --fonte3: "LemonMilkRegular", cursive;
+    --fonte4: "LemonMilkLight", cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fonte2);
+}
+
+html, body {
+    max-width: 1200px;
+    min-width: 400px;
+    background-color: #ffe9da; /* Cor de fundo do corpo */
+}
+
+.navbar {
+    position: fixed; /* Fixa a navbar no topo */
+    top: 0; /* Garante que ela fique no topo da página */
+    left: 0; /* Garante que a navbar ocupe toda a largura */
+    width: 100%; /* A navbar ocupa toda a largura da tela */
+    z-index: 10; /* Garante que a navbar fique acima do conteúdo */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 60px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.507);
+}
+
+.menuesq {
+    justify-content: center; /* Centraliza os links horizontalmente */
+    align-items: center; /* Centraliza verticalmente (se necessário) */
+    display: flex;
+    gap: 80px; /* Define o espaçamento entre os links */
+}
+
+.menucentro {
+    justify-content: center; /* Centraliza os links horizontalmente */
+    align-items: center; /* Centraliza verticalmente (se necessário) */
+    display: flex;
+    gap: 80px; /* Define o espaçamento entre os links */
+}
+
+.menudir {
+    justify-content: center; /* Centraliza os links horizontalmente */
+    align-items: center; /* Centraliza verticalmente (se necessário) */
+    display: flex;
+  }
+
+.btn {
+    background-color: #e89e65;
+    color: #ffe9da;
+    width: 220px;  /* Define a largura */
+    height: 40px;  /* Define a altura */
+    padding: center; /* Aumenta o espaço interno */
+    border-color: transparent;
+    border-radius: 15px;
+    font-family: var(--fonte3);
+}
+
