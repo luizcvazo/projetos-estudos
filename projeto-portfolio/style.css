@@ -329,7 +329,7 @@ span{
 .timeline-item:nth-child(even) {
     left: 50%;
     text-align: left;
-    padding-left: 30px;
+    padding-left: 50px;
 }
 
 .timeline-dot {
@@ -415,7 +415,7 @@ span{
 }
 .service-box{
     background-color: var(--main-color);
-    height: 300px;
+    height: 250px;
     border-radius: 3rem;
     border: 5px solid transparent;
     cursor: pointer;
@@ -613,6 +613,9 @@ span{
     .home {
         gap: 10rem;
     }
+    .service-box{
+        height: 300px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -641,6 +644,9 @@ span{
     }
     .wrapper {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .service-box{
+        height: 200px;
     }
 }
 
@@ -680,16 +686,22 @@ span{
         left: 0;
     }
     .timeline-dot {
-        left: 20px;
+        left: 0;
+    }
+    .timeline-date{
+        text-align: left;
     }
     .wrapper {
         grid-template-columns: 1fr;
+    }
+    .service-box{
+        height: 220px;
     }
 }
 
 @media (max-width: 480px) {
     html {
-        font-size: 40%;
+        font-size: 50%;
     }
     .home-content h1 {
         font-size: 5rem;
