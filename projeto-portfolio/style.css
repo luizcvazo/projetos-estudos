@@ -579,3 +579,136 @@ span{
     margin-bottom: 0;
     text-align: center;
 }
+.footer ul li a{
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease-in-out;
+}
+.footer ul li a:hover{
+   border-bottom: 3px solid var(--main-color); 
+}
+.footer ul li{
+    display: inline-block;
+    padding: 0 15px;
+}
+.footer .copyright{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+.footer .copyright a{
+    color: white;
+}
+
+/* CSS Responsivo */
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+    .header {
+        padding: 3rem 8%;
+    }
+    .home {
+        gap: 10rem;
+    }
+}
+
+@media (max-width: 992px) {
+    html {
+        font-size: 50%;
+    }
+    .header {
+        padding: 2.5rem 6%;
+    }
+    .navbar a {
+        font-size: 1.6rem;
+    }
+    .home {
+        flex-direction: column;
+        text-align: center;
+        gap: 5rem;
+    }
+    .home-content {
+        align-items: center;
+    }
+    .home-img img {
+        width: 50vw;
+    }
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 45%;
+    }
+    .header {
+        padding: 2rem 5%;
+    }
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--bg-color);
+        flex-direction: column;
+        text-align: center;
+        display: none;
+    }
+    .navbar a {
+        display: block;
+        margin: 1rem 0;
+    }
+    .timeline-items::before {
+        left: 20px;
+    }
+    .timeline-item {
+        width: 100%;
+        padding-left: 40px;
+        text-align: left;
+    }
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    .timeline-dot {
+        left: 20px;
+    }
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 40%;
+    }
+    .home-content h1 {
+        font-size: 5rem;
+    }
+    .home-img img {
+        width: 70vw;
+    }
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+    .btn-group {
+        flex-direction: column;
+    }
+    .contact form {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .footer ul li {
+        display: block;
+        margin-bottom: 1rem;
+    }
+}
