@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root{
+    --corprimaria: #a3b500;
+    --corsecundaria: #b7ca02;
+    --corterciaria: #000000;
+    --fundo: #f0f0f0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--fundo);
+    font-family:'lato', serif
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.logo{
+    width: 150px;
+    background-color: none;
+  }
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--fundo);
+    justify-content: center;
+}
+
+.links a{
+    color: var(--corterciaria);
+    text-decoration: none;
+    margin-left: 50px;
+    font-size: 1rem;
+    text-align: center;
+    display: inline-block;
+    justify-content: center;
+}
+
+.orcamento{
+    background-color: var(--corsecundaria);
+    color: var(--corterciaria);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 50px;
+}
+
+.meio{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
