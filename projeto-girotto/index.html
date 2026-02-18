@@ -3,35 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Girotto Comunicação Visual - Soluções em comunicação visual">
+    <meta name="description" content="Girotto Comunicação Visual - Soluções profissionais em fachadas, placas, adesivos e identidade visual para empresas.">
+    <meta name="author" content="Girotto Comunicação Visual">
+
     <link rel="stylesheet" href="style.css">
-    <title>Girotto Comunicação Visual</title>
+
+    <title>Girotto Comunicação Visual | Soluções em Comunicação Visual</title>
 </head>
 <body>
-    
+
     <header class="cabecalho">
 
-        <img src="imagens/girottologo.png" 
-             alt="Logo da Girotto Comunicação Visual" 
-             class="logo">
+        <a href="#home">
+            <img src="imagens/girottologo.png" 
+                 alt="Logo da Girotto Comunicação Visual" 
+                 class="logo">
+        </a>
         
-        <nav class="links">
+        <nav class="navbar" aria-label="Navegação principal">
             <a href="#home">Home</a>
             <a href="#servicos">Serviços</a>
             <a href="#equipe">Equipe</a>
-            <button class="orcamento" type="button">
+            <a href="#contato" class="orcamento">
                 Faça um Orçamento
-            </button>
+            </a>
         </nav>
 
     </header>
 
     <main>
-        <section class="meio">
-            <h1>Girotto</h1>
-            <p>Comunicação Visual</p>
+        
+        <section id="home" class="principal">
+            <h1>Girotto Comunicação Visual</h1>
+            <p class="subtitulo">
+                Soluções completas em comunicação visual para destacar sua marca
+            </p>
+
+            <p class="descricao">
+                Desenvolvemos fachadas comerciais, placas, adesivos, envelopamentos 
+                e projetos personalizados que fortalecem a identidade visual da sua empresa. 
+                Atendimento com qualidade, agilidade e acabamento profissional.
+            </p>
         </section>
+
+        <section id="servicos" aria-labelledby="titulo-servicos">
+
+            <h2 id="titulo-servicos">
+                Conheça alguns dos nossos serviços
+            </h2>
+
+            <div class="slider">
+
+                <input type="radio" name="slider" id="servico1" checked>
+                <input type="radio" name="slider" id="servico2">
+                <input type="radio" name="slider" id="servico3">
+                <input type="radio" name="slider" id="servico4">
+
+                <div class="cards">
+
+                    <label class="card" for="servico1">
+                        <img src="imagens/contrumarques.jpeg" 
+                             alt="Placa de sinalização personalizada instalada em fachada comercial" 
+                             class="card-img">
+                        <div class="content">
+                            <h3>Placas e Fachadas</h3>
+                            <p>Projetos personalizados para destacar sua empresa e atrair mais clientes.</p>
+                        </div>
+                    </label>
+
+                    <label class="card" for="servico2">
+                        <img src="imagens/paiolla.jpeg" 
+                             alt="Adesivação comercial aplicada em vitrine de loja" 
+                             class="card-img">
+                        <div class="content">
+                            <h3>Adesivação Comercial</h3>
+                            <p>Transforme vitrines e ambientes com adesivos de alta qualidade.</p>
+                        </div>
+                    </label>
+
+                    <label class="card" for="servico3">
+                        <img src="imagens/salute.jpeg" 
+                             alt="Envelopamento automotivo com identidade visual personalizada" 
+                             class="card-img">
+                        <div class="content">
+                            <h3>Envelopamento</h3>
+                            <p>Divulgue sua marca enquanto circula pela cidade.</p>
+                        </div>
+                    </label>
+
+                    <label class="card" for="servico4">
+                        <img src="imagens/tcacarro.jpeg" 
+                             alt="Totem publicitário instalado na frente de estabelecimento comercial" 
+                             class="card-img">
+                        <div class="content">
+                            <h3>Totens e Sinalização</h3>
+                            <p>Soluções estratégicas para orientar e impactar seus clientes.</p>
+                        </div>
+                    </label>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="equipe">
+            <h2>Nossa Equipe</h2>
+            <p>
+                Profissionais experientes e especializados em comunicação visual, 
+                comprometidos com qualidade e excelência em cada projeto.
+            </p>
+        </section>
+        
+        <section id="contato">
+            <h2>Solicite um Orçamento</h2>
+            <p>
+                Entre em contato conosco e receba uma proposta personalizada 
+                para o seu projeto.
+            </p>
+        </section>
+
     </main>
+
+    <footer>
+        <p>© 2026 Girotto Comunicação Visual - Todos os direitos reservados.</p>
+    </footer>
 
 </body>
 </html>
