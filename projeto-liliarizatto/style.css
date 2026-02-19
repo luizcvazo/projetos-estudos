@@ -15,24 +15,27 @@ section {
 
 .logo {
     display: block;
-    width: 300px;
+    width: 500px;
     padding: 20px;
     margin: 0 auto;
 }
 
 .navbar {
-    display: block;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 10px;
+    margin: 10px;
 }
 
 .consulta {
     display: block;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
     background-color: rgb(196, 159, 92);
+    width: 200px;
     padding: 10px;
-    margin: 10px ;
     border-radius: 20px;
-
+    color: aliceblue;
+    text-decoration: none;
 }
