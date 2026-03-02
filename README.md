@@ -1,10 +1,10 @@
-### REPOSITÓRIO DE ESTUDOS E PRÁTICAS EM PROGRAMAÇÃO
+# REPOSITÓRIO DE ESTUDOS E PRÁTICAS EM PROGRAMAÇÃO
 
 Portfólio de evolução de técnica em Front‑End e Back‑End baseados em cursos livres e Analise e Desenvolvimento de Sistemas
 
 ------------------------------------------------------------------------
 
-# Sobre o Repositório:
+## Sobre o Repositório:
 Este repositório reúne projetos desenvolvidos com foco em:
 
 -   Consolidação de fundamentos de desenvolvimento web
@@ -19,7 +19,7 @@ experimentação e melhoria contínua.
 
 ------------------------------------------------------------------------
 
-# Competências de Estudos:
+## Competências de Estudos:
 
 ✔ Estruturação semântica com HTML5\
 ✔ Layouts modernos com CSS3 (Flexbox e Grid)\
