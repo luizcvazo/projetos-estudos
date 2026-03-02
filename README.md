@@ -1,18 +1,10 @@
-# 🚀 Projetos & Estudos em Desenvolvimento Web
+Projetos & Estudos em Desenvolvimento Web
 
-```{=html}
-<p align="center">
-```
-`<strong>`{=html}Portfólio prático de evolução técnica em Front‑End e
-Back‑End`</strong>`{=html}`<br>`{=html} HTML • CSS • JavaScript • Python
-```{=html}
-</p>
-```
+Portfólio prático de evolução técnica em Front‑End e Back‑End
 
 ------------------------------------------------------------------------
 
-## 👨‍💻 Sobre o Repositório
-
+Sobre o Repositório:
 Este repositório reúne projetos desenvolvidos com foco em:
 
 -   Consolidação de fundamentos de desenvolvimento web
@@ -28,7 +20,7 @@ experimentação e melhoria contínua.
 
 ------------------------------------------------------------------------
 
-## 🧠 Competências Demonstradas
+Competências de Estudos:
 
 ✔ Estruturação semântica com HTML5\
 ✔ Layouts modernos com CSS3 (Flexbox e Grid)\
@@ -40,45 +32,27 @@ experimentação e melhoria contínua.
 
 ------------------------------------------------------------------------
 
-## 📂 Projetos Presentes
+# Projetos Presentes:
 
-### 🔹 Projeto Portfolio
+Projeto Portfolio - Landing page de apresentação profissional.
 
-Landing page de apresentação profissional.
+Projeto Tela de Login - Interface de autenticação com foco em layout e experiência do usuário.
 
-### 🔹 Projeto Login
+Projeto To‑Do List - Aplicação interativa utilizando manipulação de DOM e lógica JavaScript.
 
-Interface de autenticação com foco em layout e experiência do usuário.
+Projeto Redes Sociais - Simulação de interface inspirada em redes sociais modernas.
 
-### 🔹 Projeto To‑Do List
+Projeto Cordel - Projeto visual com foco em tipografia, responsividade e estruturação semântica.
 
-Aplicação interativa utilizando manipulação de DOM e lógica JavaScript.
+Projeto Android - Estudo de layout e organização estrutural.
 
-### 🔹 Projeto Redes Sociais
+Estudos em Python - Exercícios voltados para lógica, estrutura condicional e fundamentos de programação.
 
-Simulação de interface inspirada em redes sociais modernas.
-
-### 🔹 Projeto Cordel
-
-Projeto visual com foco em tipografia, responsividade e estruturação
-semântica.
-
-### 🔹 Projeto Android
-
-Estudo de layout e organização estrutural.
-
-### 🔹 Estudos em Python
-
-Exercícios voltados para lógica, estrutura condicional e fundamentos de
-programação.
-
-### 🔹 Outros Projetos Personalizados
-
-Projetos aplicados para prática de desenvolvimento real.
+Outros Projetos Personalizados - Projetos aplicados para prática de desenvolvimento real.
 
 ------------------------------------------------------------------------
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 -   HTML5
 -   CSS3
@@ -88,7 +62,7 @@ Projetos aplicados para prática de desenvolvimento real.
 
 ------------------------------------------------------------------------
 
-## 🚀 Como Executar
+## Como Executar
 
 Clone o repositório:
 
@@ -105,8 +79,7 @@ cd nome-do-projeto
 
 ------------------------------------------------------------------------
 
-## 📈 Objetivo Profissional
-
+## Objetivo Profissional:
 Este repositório representa minha evolução técnica como desenvolvedor,
 com foco em:
 
@@ -120,16 +93,14 @@ implementando melhorias progressivas.
 
 ------------------------------------------------------------------------
 
-## 📬 Contato
-
+## Contato:
 Se você é recrutador ou profissional da área e deseja conversar:
 
 GitHub: https://github.com/luizcvazo
 
 ------------------------------------------------------------------------
 
-## ⭐ Considerações Finais
-
+## Considerações Finais:
 Este repositório demonstra:
 
 -   Consistência de estudos
