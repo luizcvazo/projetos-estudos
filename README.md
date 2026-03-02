@@ -1,10 +1,10 @@
 ### REPOSITÓRIO DE ESTUDOS E PRÁTICAS EM PROGRAMAÇÃO
 
-Portfólio prático de evolução técnica em Front‑End e Back‑End
+Portfólio de evolução de técnica em Front‑End e Back‑End baseados em cursos livres e Analise e Desenvolvimento de Sistemas
 
 ------------------------------------------------------------------------
 
-Sobre o Repositório:
+# Sobre o Repositório:
 Este repositório reúne projetos desenvolvidos com foco em:
 
 -   Consolidação de fundamentos de desenvolvimento web
@@ -12,15 +12,14 @@ Este repositório reúne projetos desenvolvidos com foco em:
 -   Organização de projetos reais
 -   Evolução contínua em front-end e back-end
 
-Cada pasta representa um projeto independente ou conjunto de exercícios
+Cada pasta representa um projeto de estudos ou conjunto de exercícios
 aplicados.
-
 Este ambiente funciona como um laboratório prático de aprendizado,
 experimentação e melhoria contínua.
 
 ------------------------------------------------------------------------
 
-Competências de Estudos:
+# Competências de Estudos:
 
 ✔ Estruturação semântica com HTML5\
 ✔ Layouts modernos com CSS3 (Flexbox e Grid)\
@@ -32,7 +31,7 @@ Competências de Estudos:
 
 ------------------------------------------------------------------------
 
-# Projetos Presentes:
+## Projetos Presentes:
 
 Projeto Portfolio - Landing page de apresentação profissional.
 
@@ -107,5 +106,6 @@ Este repositório demonstra:
 -   Aplicação prática de conceitos
 -   Organização e clareza estrutural
 -   Comprometimento com evolução profissional
+-   Melhoria constante e aperfeiçoamento do conhecimento
 
 Obrigado por visitar.
