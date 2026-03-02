@@ -1,4 +1,4 @@
-Projetos & Estudos em Desenvolvimento Web
+### REPOSITÓRIO DE ESTUDOS E PRÁTICAS EM PROGRAMAÇÃO
 
 Portfólio prático de evolução técnica em Front‑End e Back‑End
 
