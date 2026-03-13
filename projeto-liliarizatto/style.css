@@ -1,41 +1,166 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ==========================================================================
+   1. RESET BÁSICO
+   Serve para limpar os espaços em branco que os navegadores colocam por padrão
+   ========================================================================== */
+* {
+    margin: 0; /* Remove a margem externa de todos os elementos */
+    padding: 0; /* Remove o espaçamento interno de todos os elementos */
+    box-sizing: border-box; /* Garante que bordas e paddings não aumentem o tamanho total do elemento */
 }
 
+/* ==========================================================================
+   2. CONFIGURAÇÕES GERAIS DA PÁGINA (CORPO DO SITE)
+   ========================================================================== */
 body {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #292929;
+    font-family: 'Times New Roman', Times, serif; /* Define a fonte do texto para uma sem serifa (mais moderna e limpa) */
+    background-color: #242424; /* Cor de fundo principal escurecida (grafite/preto) */
 }
 
-section {
-    padding: 60px 20px;
+/* ==========================================================================
+   3. CABEÇALHO (O CONTÊINER PRINCIPAL DA TELA)
+   ========================================================================== */
+.cabeçalho {
+    min-height: 100vh; /* Faz essa seção ocupar no mínimo 100% da altura visível da tela (View Height) */
+    position: relative; /* Cria uma "caixa de referência". Tudo que for absoluto dentro dela, vai respeitar seus limites */
+    display: flex; /* Ativa o Flexbox, um sistema poderoso para alinhar itens */
+    flex-direction: column; /* Faz os itens internos (logo, botões) se empilharem na vertical */
+    z-index: 1; /* Define a ordem de empilhamento. O 1 garante que este bloco fique à frente do fundo */
+    overflow: hidden; /* Corta qualquer coisa que tente vazar para fora do cabeçalho, evitando barras de rolagem indesejadas */
 }
 
+/* ==========================================================================
+   4. IMAGEM DE FUNDO (A MÁSCARA/BACKGROUND)
+   ========================================================================== */
+.imagem-fundo {
+    position: absolute; /* Tira a imagem da ordem normal e a deixa flutuando livremente */
+    top: 0; /* Prende a imagem no topo da tela */
+    left: 0; /* Prende a imagem na esquerda da tela */
+    width: 100%; /* Faz a imagem esticar para ocupar toda a largura */
+    height: 100%; /* Faz a imagem esticar para ocupar toda a altura */
+    object-fit: cover; /* MÁGICA: Preenche toda a tela sem amassar ou esticar a imagem (ela corta as sobras) */
+    opacity: 0.06; /* Define a transparência. 0.0 está 100% invisível. Mude para 0.2 ou 0.3 para vê-la suavemente */
+    z-index: -1; /* Joga a imagem lá para o fundo, atrás de todo o conteúdo (logo e botões) */
+}
+
+/* ==========================================================================
+   5. LOGOTIPO E EFEITO DE ZOOM
+   ========================================================================== */
+/* Essa parte controla a "caixa" (o link <a>) que envolve a imagem do logo */
+.cabeçalho > a {
+    position: absolute; /* Permite mover o logo livremente dentro do cabeçalho */
+    top: 50%; /* Desce o logo até a metade da tela */
+    left: 50%; /* Empurra o logo até a metade da tela horizontalmente */
+    
+    /* O transform abaixo faz 2 coisas:
+       1. translate(-50%, -50%): Puxa o logo um pouco para trás e para cima, para que o CENTRO EXATO dele fique no meio, e não a pontinha dele.
+       2. scale(1): Define o tamanho original dele (100%) para podermos animar depois. */
+    transform: translate(-50%, -50%) scale(1); 
+    
+    transition: transform 0.4s ease; /* Diz ao navegador para animar suavemente qualquer mudança de tamanho (por 0.4 segundos) */
+    z-index: 2; /* Garante que o logo fique na frente de tudo e possa ser clicado */
+    width: 100%; /* Permite que o link ocupe o espaço necessário, auxiliando na responsividade */
+    text-align: center; /* Centraliza a imagem internamente caso necessário */
+}
+
+/* Quando o mouse passar por cima do link do logo (:hover) */
+.cabeçalho > a:hover {
+    /* Mantém o alinhamento no centro, mas aumenta o tamanho para 105% (scale 1.05), criando o efeito de zoom */
+    transform: translate(-50%, -50%) scale(1.05); 
+}
+
+/* A imagem do logo em si */
 .logo {
-    display: block;
-    width: 500px;
-    padding: 20px;
-    margin: 0 auto;
+    max-width: 800px; /* Impede que o logo cresça mais do que 1200 pixels em monitores gigantes */
+    width: 90%; /* NOVO: Garante que o logo nunca encoste nas bordas laterais da tela */
+    height: auto; /* Mantém a proporção da imagem para ela não ficar achatada */
 }
 
+/* ==========================================================================
+   6. BARRA DE NAVEGAÇÃO E BOTÕES (RODAPÉ)
+   ========================================================================== */
 .navbar {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    padding: 10px;
-    margin: 10px;
+    margin-top: auto; /* Empurra essa caixa inteira para o espaço vazio mais abaixo possível (o rodapé) */
+    display: flex; /* Ativa o Flexbox para alinhar os botões lado a lado */
+    justify-content: center; /* Centraliza os botões no meio da tela na horizontal */
+    gap: 30px; /* Cria um espaço (um buraco) de 30px entre um botão e outro */
+    padding-bottom: 50px; /* Adiciona um espaço de respiro entre os botões e o limite inferior da tela */
+    z-index: 2; /* Garante que os botões fiquem acima do fundo para serem clicáveis */
+    width: 100%; /* Garante que a navbar ocupe toda a largura disponível */
 }
 
-.consulta {
-    display: block;
-    align-items: center;
-    justify-content: center;
-    background-color: rgb(196, 159, 92);
-    width: 200px;
-    padding: 10px;
-    border-radius: 20px;
-    color: aliceblue;
-    text-decoration: none;
+/* Estilo padrão dos botões (os links dentro da navbar) */
+.navbar a {
+    text-decoration: none; /* Remove aquele sublinhado feio padrão de links */
+    color: #242424; /* Cor do texto dentro do botão (escuro) */
+    background-color: #d2ae6d; /* Cor de fundo do botão (um tom dourado/bege) */
+    padding: 15px 40px; /* Espaço interno do botão: 15px em cima/embaixo, 40px nos lados (deixa ele "gordinho") */
+    border-radius: 8px; /* Arredonda as quinas do botão */
+    font-size: 1.1rem; /* Tamanho da fonte do botão (um pouco maior que o padrão) */
+    font-weight: bold; /* Deixa o texto do botão em negrito */
+    text-align: center; /* Centraliza o texto dentro do botão */
+    
+    /* EFEITOS INICIAIS DE ELEVAÇÃO */
+    transform: translateY(0); /* Define a posição vertical original (sem movimento) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Cria uma sombra leve abaixo do botão. Valores: eixo-X, eixo-Y, desfoque, cor */
+    
+    /* Animação: todas as propriedades (cor, sombra, posição) vão mudar suavemente em 0.3 segundos */
+    transition: all 0.3s ease; 
 }
+
+/* Efeito quando o mouse passa por cima do botão (:hover) */
+.navbar a:hover {
+    background-color: #929292; /* Muda a cor de fundo do botão para cinza */
+    color: #d2ae6d; /* Muda a cor do texto para o dourado original */
+    
+    /* EFEITO DE LEVANTAR O BOTÃO */
+    transform: translateY(-4px); /* O botão sobe 4 pixels (valores negativos no Y sobem) */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); /* A sombra fica maior e mais espalhada, como se estivesse mais alto */
+}
+
+/* Efeito no exato momento do clique (:active) - quando segura o botão esquerdo do mouse */
+.navbar a:active {
+    transform: translateY(-1px); /* O botão "afunda" quase de volta à posição original */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.4); /* A sombra diminui, mostrando que o botão foi pressionado contra a tela */
+}
+
+/* ==========================================================================
+   7. RESPONSIVIDADE (MEDIA QUERIES)
+   É aqui que adaptamos o visual para telas menores (Tablets e Celulares)
+   ========================================================================== */
+
+/* REGRAS PARA TABLETS E CELULARES GRANDES (Telas de até 768px de largura) */
+@media (max-width: 768px) {
+    .logo {
+        max-width: 80%; /* Diminui um pouco o limite máximo do logo para não parecer tão grande */
+    }
+
+    .navbar {
+        gap: 15px; /* Reduz o espaço entre os botões para caberem melhor na tela */
+        padding-bottom: 30px; /* Reduz a distância do rodapé */
+    }
+
+    .navbar a {
+        padding: 12px 25px; /* Diminui o "enchimento" do botão, deixando-o menor */
+        font-size: 1rem; /* Diminui levemente a fonte */
+    }
+}
+
+/* REGRAS EXCLUSIVAS PARA CELULARES (Telas de até 480px de largura) */
+@media (max-width: 480px) {
+    .logo {
+        max-width: 90%; /* Deixa o logo usar mais espaço, pois a tela já é bem pequena */
+    }
+
+    .navbar {
+        flex-direction: column; /* MUITO IMPORTANTE: Em vez de ficarem lado a lado, os botões empilham (um em cima do outro) */
+        align-items: center; /* Centraliza a coluna de botões no meio da tela */
+        padding-bottom: 20px; /* Reduz ainda mais a distância do rodapé */
+        gap: 15px; /* Espaço VERTICAL entre os botões agora */
+    }
+
+    .navbar a {
+        width: 85%; /* Os botões passam a ocupar 85% da largura da tela, criando um visual de menu estilo Linktree/App */
+        padding: 15px 20px; /* Restaura um pouco da altura do botão para ficar fácil de tocar com o dedo (touch amigável) */
+    }
+}
+
