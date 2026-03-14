@@ -1,27 +1,27 @@
-const botao = document.getElementById("btn-mobile")
-const menu = document.getElementById("navbar")
+document.addEventListener("DOMContentLoaded", () => {
+    const btnMobile = document.getElementById("btn-mobile");
+    const navbar = document.getElementById("navbar");
 
-botao.addEventListener("click" , function(){
-    menu.classList.toggle("menu-aberto")
-})
-
-const linksDoMenu = document.querySelectorAll("#navbar a");
-
-linksDoMenu.forEach(function(link) {
-    
-    link.addEventListener("click", function(evento) {
-        
-        evento.preventDefault();
-
-        const idDoDestino = link.getAttribute("href");
-        
-        const sessaoDestino = document.querySelector(idDoDestino);
-
-        sessaoDestino.scrollIntoView({
-            behavior: "smooth"
-        });
-
-        menu.classList.remove("menu-aberto");
+    // Abrir/Fechar Menu Mobile
+    btnMobile.addEventListener("click", () => {
+        navbar.classList.toggle("menu-aberto");
     });
-    
+
+    // Rolagem Suave para todos os links internos
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function(e) {
+            const targetId = this.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                e.preventDefault();
+                targetElement.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+                // Fecha o menu mobile ao clicar
+                navbar.classList.remove("menu-aberto");
+            }
+        });
+    });
 });
