@@ -25,11 +25,15 @@ p{
     color: #D2AE6D;
 }
 
-.cabeçalho{
+.cabecalho{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
+}
+
+#btn-mobile{
+    display: none;
 }
 
 .logo1{
@@ -64,33 +68,60 @@ p{
     color: #252525;
 }
 
-.hero{
+.hero {
     text-align: center;
-    padding: 80px 20px;
+    padding: 20px;
+    position: relative;
+    overflow: hidden; 
+    z-index: 1; 
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
-.hero h1{
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -10%; 
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background-image: linear-gradient(rgba(37, 37, 37, 0.85), rgba(37, 37, 37, 0.85)), url('imagens/background.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: -1; 
+    transition: transform 1.5s ease-out; 
+    will-change: transform; 
+}
+
+.hero:hover::before {
+    transform: scale(1.1);
+}
+
+.hero h1 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin: 0;
+    color: #D2AE6D;
 }
 
-.hero p{
-    max-width: 700px;
-    margin: auto;
+.hero p {
     font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0;
 }
 
 .servicos{
-    margin-top: 80px;
+    margin-top: 10px;
     text-align: center;
 }
 
 .servicos h2{
     margin-bottom: 40px;
-}
-
-.servicos h2{
-    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #D2AE6D;
 }
 
 .servicos p{
@@ -101,10 +132,6 @@ p{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-}
-
-.servicos h2{
-    color: #D2AE6D;
 }
 
 .servicos article{
@@ -120,9 +147,13 @@ p{
 }
 
 .sobre{
-    margin-top: 80px;
+    margin: 80px;
     text-align: center;
     color: #D2AE6D;
+}
+
+.sobre h2{
+    font-size: 2.5rem;
 }
 
 .sobre p{
@@ -138,9 +169,70 @@ footer{
     padding: 30px;
 }
 
-.servicos{
-    margin-top: 80px;
+.container-principal{
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+#contato, #localizacao{
+    flex: 1;
+    width: 48%;
+    background-color: #D2AE6D;
+    padding: 30px;
+    border-radius: 10px;
+    align-items: stretch;
+}
+
+#contato h2{
     text-align: center;
+}
+
+#localizacao h2{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+textarea{
+    resize: vertical;
+}
+
+button{
+    background-color:#755724;
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#localizacao iframe{
+    width: 100%;
+    flex-grow: 1;
+    border-radius: 15px;
+}
+
+input:focus{
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+textarea:focus{
+    outline: none;
+    transition: all 0.3s ease;
 }
 
 @media (max-width: 768px){
@@ -149,9 +241,56 @@ footer{
     grid-template-columns: 1fr;
 }
 
-.cabeçalho{
+.cabecalho{
     flex-direction: column;
     gap: 20px;
+}
+
+.navbar ul{
+    display: none;
+}
+
+.menu-aberto{
+    display: block;
+    background-color: #755724;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    top: 70px;
+}
+
+.navbar.menu-aberto ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 70px;
+    background-color: #755724;
+    padding: 20px;
+}
+
+#btn-mobile{
+    display: flex;
+    border: none;
+    font-size: 1.5rem;
+    color: #D2AE6D;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-principal{
+    flex-direction: column;
+}
+
+#contato, #localizacao{
+    width: 100%;
+}
+
+#localizacao iframe{
+    height: 400px;
 }
 
 }
