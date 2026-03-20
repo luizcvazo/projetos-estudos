@@ -12,44 +12,171 @@
 </head>
 <body>
 
-    <header class="cabecalho">
+    <!-- BARRA DE NAVEGAÇÃO SUPERIOR COM LINKS E BOTÂO PARA CHAMAR AÇÃO -->
 
-        <a href="#home">
-            <img src="imagens/girottologo.png" 
-                 alt="Logo da Girotto Comunicação Visual" 
-                 class="logo">
-        </a>
-        
-        <nav class="navbar" aria-label="Navegação principal">
-            <a href="#home">Home</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#equipe">Equipe</a>
-            <a href="#contato" class="orcamento">
-                Faça um Orçamento
+    <header id="nav-bar">
+        <nav class="navbar">
+            <a href="#inicio">
+                <img src="imagens/girottologo.png" alt="Logo da Girotto Comunicação Visual" width="125px">
             </a>
+            <ul class="links">
+                <li>
+                    <a href="#inicio">Início</a>
+                </li>
+                <li>
+                    <a href="#projetos">Projetos</a>
+                </li>
+                <li>
+                    <a href="#depoimentos">Depoimentos</a>
+                </li>
+            </ul>
+
+            <a href="#orcamento" class="btn-orcamento">Faça um orçamento</a> 
+
         </nav>
-
     </header>
-
+    
     <main>
-        
-        <section id="home" class="principal">
-            <h1>Girotto Comunicação Visual</h1>
-            <p class="subtitulo">
-                Soluções completas em comunicação visual para destacar sua marca
-            </p>
+        <section class="principal">
 
-            <p class="descricao">
-                Desenvolvemos fachadas comerciais, placas, adesivos, envelopamentos 
-                e projetos personalizados que fortalecem a identidade visual da sua empresa. 
-                Atendimento com qualidade, agilidade e acabamento profissional.
-            </p>
+            <h1>Comunicação Visual como você nunca imaginou!</h1>
+
+            <p>Na Girotto Comunicação Visual fazemos toda a parte visual para sua empresa, desde fachadas personalizadas, banners, totem e muito mais.</p>
+            <p>Também oferecemos serviços personalizados e papelaria completa para sua empresa e para sua marca.</p>
+            <p> Ficou interessado? Faça um orçamento sem compromisso.</p>
+
+            <div class="btn-main">
+                <a href="#contato" class="btn-contato">Chama no Whats</a>
+                <a href="#portfolio" class="btn-portfolio">Conheça nosso portfólio</a>
+            </div>
+
         </section>
+            
+    <!-- TRABALHOS COM CARDS DE FORMA INDIVIDUAL -->
+
+    <section id="trabalhos">
+
+        <h2>Conheça nosso trabalho</h2>
+        <p>Alguns dos nossos projetos inteiramente personalizados para o cliente</p>
+
+        <div class="cards-trabalhos">
+
+        <article>
+            <h3>Construmarques</h3>
+            <figure>
+                <img src="imagens/contrumarques.jpeg" alt="Fachada em lona para empresa Construmarques">
+                <figcaption>Fachada feita em lona para o cliente Construmarques. Estrutra feita em metalon e impressão em lona de alta qualidade que oferece resistência e durabilidade a exposição do tempo.</figcaption>
+            </figure>
+
+
+        </article>
+
+        <article>
+            <h3>Paiolla Professional</h3>
+            <figure>
+                <img src="imagens/paiolla.jpeg" alt="Fachada da empresa Paiolla Professional">
+                <figcaption>Fachada com letra caixa personalizada feita em ACM para dar maior resistência ao tempo, além da personalização com luminosos para destaque noturno</figcaption>
+            </figure>
+
+        </article>
+
+        <article>
+            <h3>Salute</h3>
+            <figure>
+                <img src="imagens/salute.jpeg" alt="Painel da empresa Salute">
+                <figcaption>Painel interno feito em acrilico 2mm com letra caixa feita em PVC, garantindo durabilidade do painel e deixando a parte interna com mais elegância para o cliente.</figcaption>
+            </figure>
+
+        </article>
+
+        <article>
+            <h3>TCA - Treinamentos Profissionais</h3>
+            <figure>
+                <img src="imagens/tcacarro.jpeg" alt="Carro adesivado da empresa TCA">
+                <figcaption>Plotagem em veiculo com adesivo vinilico de alta durabilidade para a comunicação visual ficar completa para sua marca.</figcaption>
+            </figure>
+
+        </article>
+
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS COM CARDS INDIVIDUAIS -->
+
+    <section id="depoimentos">
+
+        <h2>Depoimentos dos nossos clientes</h2>
+        <p>Alguns dos depoimentos dos clientes e que fazem a diferença na hora de aprimorar e executar nossos serviços</p>
+
+        <div class="cards-depoimentos">
+
+            <article>
+                <figure>
+                    <img src="imagens/girotto2.jpg" alt="Logo da empresa X" width="50px">
+                    <figcaption>
+                        <cite>Empresa X</cite>
+                    </figcaption>
+                    <blockquote>
+                        <p>Execelente trabalho!</p>
+                        <p>Entregue no prazo esperado, muita qualidade e preço super justo!</p>
+                    </blockquote>
+                </figure>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="imagens/girotto2.jpg" alt="Logo da empresa X" width="50px">
+                    <figcaption>
+                        <cite>Empresa X</cite>
+                    </figcaption>
+                    <blockquote>
+                        <p>Execelente trabalho!</p>
+                        <p>Entregue no prazo esperado, muita qualidade e preço super justo!</p>
+                    </blockquote>
+                </figure>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="imagens/girotto2.jpg" alt="Logo da empresa X" width="50px">
+                    <figcaption>
+                        <cite>Empresa X</cite>
+                    </figcaption>
+                    <blockquote>
+                        <p>Execelente trabalho!</p>
+                        <p>Entregue no prazo esperado, muita qualidade e preço super justo!</p>
+                    </blockquote>
+                </figure>
+            </article>
+
+        </div>
+    </section>
 
     </main>
 
     <footer>
-        <p>© 2026 Girotto Comunicação Visual - Todos os direitos reservados.</p>
+        <address>
+            Av. do café 48A - Chácara Braz Miraglia - 17207-030 - Jaú/SP
+            <a href="tel:+551434180093">Whatsapp</a>
+            <a href="mailto:contato@girotto.com.br">E-mail</a>
+        </address>
+
+        <p>Segunda à sexta, das <time datetime="08:00">08h</time> às <time datetime="18:00">18h</time></p>
+
+        <ul>
+            <li>
+                <a href="#instagram">Instagram</a> <!-- ainda a ser definido -->
+            </li>
+            <li>
+                <a href="#behance">Behance</a> <!-- ainda a ser definido -->
+            </li>
+            <li>
+                <a href="#whatsapp">Whatsapp</a> <!-- ainda a ser definido -->
+            </li>
+        </ul>
+
+        <small>Girotto Comunicação Visual <br> Feito por Luiz Carlos Vazo - Todos os direitos reservados &copy;</small>
+
     </footer>
 
 </body>
