@@ -369,3 +369,41 @@ small {
 
     .endereco a { width: 90%; }
 }
+
+@media (max-width: 768px) {
+    header {
+        left: 0;
+        width: 100%;
+        padding: 0 10px; /* Dá um respiro nas laterais */
+    }
+
+    .navbar {
+        flex-direction: column; /* Empilha os itens */
+        height: auto;
+        padding: 15px;
+        gap: 15px;
+        border-radius: 20px;
+    }
+
+    .navbar ul {
+        flex-direction: row; /* Mantém os links lado a lado */
+        flex-wrap: wrap;     /* Mas permite quebrar linha se não couber */
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .btn-orcamento {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    /* Ajuste da logo para não ficar gigante no celular */
+    .navbar a img {
+        max-width: 150px;
+        padding-left: 0;
+    }
+}
